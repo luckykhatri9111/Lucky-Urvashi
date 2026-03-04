@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Lucky ❤️ Urvashi</title>
@@ -8,17 +8,16 @@
 <style>
 body{
   margin:0;
-  background:linear-gradient(to bottom, #000, #400000);
+  background:black;
   color:white;
-  font-family:Arial, sans-serif;
-  overflow:hidden;
+  font-family:Arial;
+  text-align:center;
 }
 
 .page{
   display:none;
   min-height:100vh;
-  padding:40px 20px;
-  text-align:center;
+  padding:50px 20px;
 }
 
 .page.active{
@@ -27,191 +26,73 @@ body{
 
 h1{
   color:#ff4d6d;
-  font-size:2.2em;
   animation:fade 1.5s;
 }
 
 p{
-  font-size:1.1em;
-  line-height:1.6;
   animation:fade 2s;
-}
-
-img{
-  width:70%;
-  max-width:280px;
-  border-radius:20px;
-  margin:20px 0;
-  box-shadow:0 0 15px crimson;
-  animation:zoom 1.5s;
 }
 
 button{
   background:crimson;
-  border:none;
   color:white;
+  border:none;
   padding:12px 25px;
-  border-radius:25px;
-  font-size:1em;
+  border-radius:20px;
   margin:10px;
-}
-
-button:hover{
-  opacity:0.8;
+  font-size:16px;
 }
 
 @keyframes fade{
-  from{opacity:0;transform:translateY(20px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes zoom{
-  from{transform:scale(0.7);opacity:0;}
-  to{transform:scale(1);opacity:1;}
-}
-
-.heart{
-  position:fixed;
-  color:red;
-  font-size:20px;
-  animation:fall 3s linear;
-}
-
-@keyframes fall{
-  from{top:-10px;}
-  to{top:100vh;opacity:0;}
+  from{opacity:0;}
+  to{opacity:1;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Page 1 -->
 <div class="page active">
 <h1>My Beautiful Bbu ❤️</h1>
-<p>You are my smile, my peace, my forever</p>
-<img src="images/photo1.jpg">
+<p>You are my forever</p>
 </div>
 
-<!-- Page 2 -->
 <div class="page">
-<h1>Mata Ji Bless Us 🙏</h1>
-<p>Navratri me hum mile… Mata ji bhi chahti hain hum saath rahein</p>
-<img src="images/mataji.png">
+<h1>Trust Me 💖</h1>
+<p>I will build everything with you</p>
+<button onclick="next()">YES ❤️</button>
 </div>
 
-<!-- Page 3 -->
 <div class="page">
-<h1>Trust Me Bbu 💖</h1>
-<p>Main tumhare saath sab kuch build karunga… Will you walk with me?</p>
-
-<button onclick="yesFirst()">YES ❤️</button>
-<button onclick="alert('Please think again 🥺❤️')">NO 💔</button>
-
-<div id="msg1"></div>
+<h1>Will You Marry Me? 💍</h1>
+<p>Be mine forever</p>
+<button onclick="final()">YES 😍</button>
 </div>
 
-<!-- Page 4 -->
-<div class="page">
-<h1>You Are Amazing ✨</h1>
-
-<img src="images/photo2.jpg">
-<p>So Beautiful 😍</p>
-
-<img src="images/photo3.jpg">
-<p>Strong Girl 💪</p>
-
-<img src="images/photo4.jpg">
-<p>Perfect Style 👗</p>
-
-<img src="images/photo5.jpg">
-<p>My Everything ❤️</p>
-
-<button onclick="makeHearts()">❤️ Hearts</button>
-</div>
-
-<!-- Page 5 -->
-<div class="page">
-<h1>Our Journey 🚶‍♂️🚶‍♀️</h1>
-<p>Friends → Love → Forever</p>
-<img src="images/journey.png">
-</div>
-
-<!-- Page 6 -->
-<div class="page">
-<h1>Our Wedding 💍</h1>
-<p>Together till infinity</p>
-<img src="images/wedding.png">
-</div>
-
-<!-- Page 7 -->
-<div class="page">
-<h1>Dream Home 🏡</h1>
-<img src="images/house.png">
-</div>
-
-<!-- Page 8 -->
-<div class="page">
-<h1>Our Car 🚗</h1>
-<img src="images/car.png">
-</div>
-
-<!-- Page 9 -->
-<div class="page">
-<h1>Happy Family 👨‍👩‍👧‍👦</h1>
-<img src="images/family.png">
-</div>
-
-<!-- Page 10 -->
-<div class="page">
-<h1>Will You Marry Me? 💍❤️</h1>
-<p>Be my forever, Bbu</p>
-
-<button onclick="finalYes()">YES 😍</button>
-<button onclick="alert('I will wait for you 💖')">NO 😢</button>
-
-<div id="finalMsg"></div>
+<div class="page" id="end">
+<h1>Forever Together ❤️</h1>
+<p>I Love You Urvashi</p>
 </div>
 
 <script>
-let pages=document.querySelectorAll(".page");
-let cur=0;
+let p=document.querySelectorAll(".page");
+let i=0;
 
-document.body.addEventListener("click",()=>{
-  if(event.target.tagName!="BUTTON"){
-    nextPage();
-  }
-});
-
-function nextPage(){
-  if(cur<pages.length-1){
-    pages[cur].classList.remove("active");
-    cur++;
-    pages[cur].classList.add("active");
-  }
+function next(){
+  p[i].classList.remove("active");
+  i++;
+  p[i].classList.add("active");
 }
 
-function yesFirst(){
-  document.getElementById("msg1").innerHTML="🎉 I knew it! ❤️";
-  makeHearts();
-  setTimeout(nextPage,1500);
+function final(){
+  next();
 }
 
-function finalYes(){
-  document.getElementById("finalMsg").innerHTML="💍❤️ Forever Together ❤️💍";
-  makeHearts();
-}
-
-function makeHearts(){
-  for(let i=0;i<25;i++){
-    let h=document.createElement("div");
-    h.className="heart";
-    h.innerHTML="❤️";
-    h.style.left=Math.random()*100+"vw";
-    h.style.fontSize=(15+Math.random()*25)+"px";
-    document.body.appendChild(h);
-
-    setTimeout(()=>h.remove(),3000);
+document.body.onclick=function(e){
+  if(e.target.tagName!="BUTTON"){
+    if(i<p.length-1){
+      next();
+    }
   }
 }
 </script>
