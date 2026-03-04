@@ -1,101 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Lucky ❤️ Urvashi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-  margin:0;
-  background:black;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-}
-
-.page{
-  display:none;
-  min-height:100vh;
-  padding:50px 20px;
-}
-
-.page.active{
-  display:block;
-}
-
-h1{
-  color:#ff4d6d;
-  animation:fade 1.5s;
-}
-
-p{
-  animation:fade 2s;
-}
-
-button{
-  background:crimson;
-  color:white;
-  border:none;
-  padding:12px 25px;
-  border-radius:20px;
-  margin:10px;
-  font-size:16px;
-}
-
-@keyframes fade{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-</style>
+  <title>Lucky ❤️ Urvashi</title>
+  <meta charset="UTF-8">
 </head>
-
-<body>
-
-<div class="page active">
-<h1>My Beautiful Bbu ❤️</h1>
-<p>You are my forever</p>
-</div>
-
-<div class="page">
-<h1>Trust Me 💖</h1>
-<p>I will build everything with you</p>
-<button onclick="next()">YES ❤️</button>
-</div>
-
-<div class="page">
-<h1>Will You Marry Me? 💍</h1>
-<p>Be mine forever</p>
-<button onclick="final()">YES 😍</button>
-</div>
-
-<div class="page" id="end">
-<h1>Forever Together ❤️</h1>
-<p>I Love You Urvashi</p>
-</div>
-
-<script>
-let p=document.querySelectorAll(".page");
-let i=0;
-
-function next(){
-  p[i].classList.remove("active");
-  i++;
-  p[i].classList.add("active");
-}
-
-function final(){
-  next();
-}
-
-document.body.onclick=function(e){
-  if(e.target.tagName!="BUTTON"){
-    if(i<p.length-1){
-      next();
-    }
-  }
-}
-</script>
-
+<body style="background:black; color:white; text-align:center; padding-top:50px;">
+  <h1 style="font-size:2rem; color:#ff4d6d;">My Beautiful Bbu ❤️</h1>
+  <p style="font-size:1.2rem;">You are my forever ❤️</p>
 </body>
 </html>
