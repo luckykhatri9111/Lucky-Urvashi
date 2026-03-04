@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky ❤️ Urvashi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<!-- Page 1 -->
+<section class="page active">
+  <h1 class="animate">My Beautiful Bbu ❤️</h1>
+  <p class="animate">You are my smile, my peace, my forever</p>
+  <img src="images/photo1.jpg" class="main-img animate">
+</section>
+
+<!-- Page 2 -->
+<section class="page">
+  <h1 class="animate">Navratri Blessings 🙏</h1>
+  <p class="animate">Mata ji bhi chahti hain humesha hum saath rahein</p>
+  <img src="images/mataji.png" class="main-img animate">
+</section>
+
+<!-- Page 3 -->
+<section class="page">
+  <h1 class="animate">Trust Me Bbu 💖</h1>
+  <p class="animate">Main tumhare saath sab kuch build karunga</p>
+
+  <div class="buttons">
+    <button onclick="acceptLove()">YES ❤️</button>
+    <button onclick="rejectLove()">NO 💔</button>
+  </div>
+
+  <div id="effect"></div>
+</section>
+
+<!-- Page 4 -->
+<section class="page">
+  <h1 class="animate">You Are Amazing ✨</h1>
+
+  <div class="gallery">
+    <div>
+      <img src="images/photo2.jpg">
+      <p>So Beautiful 😍</p>
+    </div>
+
+    <div>
+      <img src="images/photo3.jpg">
+      <p>Strong Girl 💪</p>
+    </div>
+
+    <div>
+      <img src="images/photo4.jpg">
+      <p>Perfect Style 👗</p>
+    </div>
+
+    <div>
+      <img src="images/photo5.jpg">
+      <p>My Everything ❤️</p>
+    </div>
+  </div>
+
+  <div class="effects">
+    <button onclick="hearts()">❤️ Hearts</button>
+    <button onclick="flowers()">🌹 Roses</button>
+    <button onclick="fireworks()">🎆 Fire</button>
+  </div>
+</section>
+
+<!-- Page 5 -->
+<section class="page">
+  <h1 class="animate">Our Journey 🚶‍♂️🚶‍♀️</h1>
+  <p class="animate">Friends → Love → Forever</p>
+  <img src="images/journey.png" class="main-img animate">
+</section>
+
+<!-- Page 6 -->
+<section class="page">
+  <h1 class="animate">Our Wedding 💍</h1>
+  <p class="animate">Together till infinity</p>
+  <img src="images/wedding.png" class="main-img animate">
+</section>
+
+<!-- Page 7 -->
+<section class="page">
+  <h1 class="animate">Our Dream Home 🏡</h1>
+  <img src="images/house.png" class="main-img animate">
+</section>
+
+<!-- Page 8 -->
+<section class="page">
+  <h1 class="animate">Our Car 🚗</h1>
+  <img src="images/car.png" class="main-img animate">
+</section>
+
+<!-- Page 9 -->
+<section class="page">
+  <h1 class="animate">Happy Family 👨‍👩‍👧‍👦</h1>
+  <img src="images/family.png" class="main-img animate">
+</section>
+
+<!-- Page 10 -->
+<section class="page">
+  <h1 class="animate">Will You Marry Me? 💍❤️</h1>
+  <p class="animate">Be my forever, Bbu</p>
+
+  <div class="buttons">
+    <button onclick="finalYes()">YES 😍</button>
+    <button onclick="finalNo()">NO 😢</button>
+  </div>
+
+  <div id="final"></div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
